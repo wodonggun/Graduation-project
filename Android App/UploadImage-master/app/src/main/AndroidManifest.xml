@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidbuts.uploadimage">
+
+    <uses-permission android:name="android.permission.INTERNET"/>                 <!--  인터넷 권한 부여 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>     <!--  네트워크 통신 권한 부여 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>    <!--  파일 읽기 부여 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>   <!--  파일 쓰기 권한 부여 -->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cbnu_inform_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                                                                  <!-- 스플래쉬 엑티비티 -->
+
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">                          <!-- 메인 엑티비티 -->
+        </activity>
+
+
+        <service
+            android:name="com.androidbuts.Background.MyService">                <!--  안드로이드 백그라운드 서비스 선언 -->
+        </service>
+
+        <activity
+            android:name="com.androidbuts.permission.PermissionsActivity"
+            android:label="@string/app_name" />                                <!--  안드로이드 백그라운드 서비스 선언 -->
+
+    </application>
+
+</manifest>
